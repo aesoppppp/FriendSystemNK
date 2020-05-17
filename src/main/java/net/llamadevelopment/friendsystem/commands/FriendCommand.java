@@ -19,7 +19,7 @@ public class FriendCommand extends CommandManager {
     private FriendSystem plugin;
 
     public FriendCommand(FriendSystem plugin) {
-        super(plugin, plugin.getConfig().getString("Commands.Friend"), "Friend management commands.", "/friend");
+        super(plugin, plugin.getConfig().getString("Commands.Friend"), "친구 관련 명령어 입니다.", "/friend");
         this.plugin = plugin;
     }
 
@@ -28,7 +28,7 @@ public class FriendCommand extends CommandManager {
             Player player = (Player) sender;
             if (args.length == 2) {
                 String target = args[1];
-                if (args[0].equalsIgnoreCase("add")) {
+                if (args[0].equalsIgnoreCase("요청")) {
                     if (player.getName().equalsIgnoreCase(target)) {
                         player.sendMessage(Messages.getAndReplace("Messages.FriendYourself"));
                         return true;
@@ -45,14 +45,14 @@ public class FriendCommand extends CommandManager {
                             } else player.sendMessage(Messages.getAndReplace("Messages.AlreadyFriends", target));
                         } else player.sendMessage(Messages.getAndReplace("Messages.CannotRequest"));
                     } else player.sendMessage(Messages.getAndReplace("Messages.UserDoesNotExist"));
-                } else if (args[0].equalsIgnoreCase("remove")) {
+                } else if (args[0].equalsIgnoreCase("삭제")) {
                     if (FriendManager.areFriends(player.getName(), target)) {
                         FriendManager.removeFriend(player.getName(), target);
                         player.sendMessage(Messages.getAndReplace("Messages.FriendRemoved", target));
                         Player player1 = plugin.getServer().getPlayer(target);
                         if (player1 != null) player1.sendMessage(Messages.getAndReplace("Messages.FriendRemoved", player.getName()));
                     } else player.sendMessage(Messages.getAndReplace("Messages.NotOnFriendList", target));
-                } else if (args[0].equalsIgnoreCase("accept")) {
+                } else if (args[0].equalsIgnoreCase("수락")) {
                     if (FriendManager.requestExists(target, player.getName())) {
                         if (!FriendManager.areFriends(player.getName(), target)) {
                             FriendManager.createFriendship(player.getName(), target);
@@ -63,7 +63,7 @@ public class FriendCommand extends CommandManager {
                             if (player1 != null) player1.sendMessage(Messages.getAndReplace("Messages.RequestAccepted", player.getName()));
                         } else player.sendMessage(Messages.getAndReplace("Messages.AlreadyFriends", target));
                     } else player.sendMessage(Messages.getAndReplace("Messages.RequestNotExists"));
-                } else if (args[0].equalsIgnoreCase("deny")) {
+                } else if (args[0].equalsIgnoreCase("거절")) {
                     if (FriendManager.requestExists(target, player.getName())) {
                         FriendManager.removeFriendRequest(target, player.getName());
                         player.sendMessage(Messages.getAndReplace("Messages.FriendDenied", target));
@@ -72,19 +72,19 @@ public class FriendCommand extends CommandManager {
                     } else player.sendMessage(Messages.getAndReplace("Messages.RequestNotExists"));
                 } else sendHelp(player);
             } else if (args.length == 1) {
-                if (args[0].equalsIgnoreCase("help")) {
+                if (args[0].equalsIgnoreCase("도움말")) {
                     sendHelp(player);
-                } else if (args[0].equalsIgnoreCase("list")) {
+                } else if (args[0].equalsIgnoreCase("목록")) {
                     sendFriendList(player);
-                } else if (args[0].equalsIgnoreCase("requests")) {
+                } else if (args[0].equalsIgnoreCase("수신목록")) {
                     sendRequestsList(player);
-                } else if (args[0].equalsIgnoreCase("togglenotify")) {
+                } else if (args[0].equalsIgnoreCase("알림")) {
                     FriendManager.toggleNotifications(player);
-                } else if (args[0].equalsIgnoreCase("togglerequests")) {
+                } else if (args[0].equalsIgnoreCase("수신거부")) {
                     FriendManager.toggleRequests(player);
                 } else sendHelp(player);
             } else if (args.length >= 3) {
-                if (args[0].equalsIgnoreCase("msg")) {
+                if (args[0].equalsIgnoreCase("귀")) {
                     Player friend = plugin.getServer().getPlayer(args[1]);
                     String message = "";
                     for (int i = 2; i < args.length; ++i) message = message + args[i] + " ";

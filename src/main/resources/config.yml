@@ -10,52 +10,52 @@ MongoDB:
   Database: "friendsystem"
 
 Messages:
-  Prefix: "&8» &eFriendSystem &8| &7"
-  NoPermission: "&cYou have insufficient permissions to execute this command."
-  FriendYourself: "&cYou can't be friends with yourself."
-  SendRequest: "&aA friend request was sent to &7[0]&a."
-  FriendAccepted: "&aYou accepted &7[0]'s &afriend request."
-  FriendDenied: "&aYou denied &7[0]'s &afriend request."
-  FriendRemoved: "&7[0] &ais no longer on your friends list."
-  AlreadySendRequest: "&cA friend request has already been sent to &7[0]&c."
-  RequestDenied: "&7[0] &cdid not accept your request."
-  RequestAccepted: "&7[0] &ahas accepted your request."
-  RequestReceived: "&7[0] &asent you a friend request. You can accept it with &e/friend accept [0]&a."
-  AlreadyFriends: "&cYou're already friends with &7[0]&c."
-  UserDoesNotExist: "&cThis user does not exist."
-  NotOnFriendList: "&7[0] &cis not your friend."
-  NoFriends: "&cYou do not have any friends."
-  NoRequests: "&cYou do not have any requests."
-  RequestNotExists: "&cThis player has not sent you a friend request."
-  CannotRequest: "&cYou cannot send a friend request to this player."
-  FriendslistInfo: "&aHere's a list of your friends:"
-  RequestlistInfo: "&aHere's a list of your friend requests:"
-  FriendlistFormat: "&7-> &e[0]"
-  RequestlistFormat: "&7-> &e[0]"
-  JoinNotification: "&7There are currently &e[0] &7friends online."
-  FriendJoined: "&7[0] &ais now online."
-  FriendLeft: "&7[0] &cis now offline."
-  RequestTrue: "&aYou are now receiving requests."
-  RequestFalse: "&cYou will now receive no more requests."
-  NotificationTrue: "&aYou will now receive notifications."
-  NotificationFalse: "&cYou will no longer receive any notifications."
-  NotOnline: "&cThis player is not online."
-  MsgReceived: "&8[&a[0]&8] &e-> &8[&aMe&8] &8: &7[1]"
-  MsgSent: "&8[&aMe&8] &e-> &8[&a[0]&8] &8: &7[1]"
+  Prefix: '§d[§f친구§d] '
+  NoPermission: '&c이 명령어를 실행할 권한이 없습니다!'
+  FriendYourself: '&c자신과 친구가 될 수 없습니다!'
+  SendRequest: '&7[0] &f에게 친구 요청을 보냈습니다!.'
+  FriendAccepted: '&7[0] &a의 친구 요청을 수락했습니다.'
+  FriendDenied: '&7[0] &f의 친구 요청을 거절했습니다.'
+  FriendRemoved: '&7[0] &f와 더이상 친구가 아닙니다.'
+  AlreadySendRequest: '&7[0] &c에게 이미 친구 요청을 했습니다!.'
+  RequestDenied: '&7[0] &f가 당신의 친구 요청을 거절했습니다.'
+  RequestAccepted: '&7[0] &a가 당신의 친구 요청을 수락했습니다!'
+  RequestReceived: '&7[0] &f가 당신에게 친구 요청을 보냈습니다. &e/친구 수락 [0] &f로 친구 요청을 수락합니다.'
+  AlreadyFriends: '&7[0] &f와 이미 친구입니다.'
+  UserDoesNotExist: '&c해당 유저는 존재하지 않습니다!'
+  NotOnFriendList: '&7[0] &f와 친구가 아닙니다.'
+  NoFriends: '&c친구가 없습니다!'
+  NoRequests: '&f도착한 친구 요청이 없습니다.'
+  RequestNotExists: '&f이 플레이어가 보낸 친구 요청이 없습니다.'
+  CannotRequest: '&c이 플레이어에게 친구 요청을 보낼 수 없습니다.'
+  FriendslistInfo: '&f당신의 친구 목록입니다:'
+  RequestlistInfo: '&f당신의 친구 요청 목록입니다:'
+  FriendlistFormat: '&7-> &e[0]'
+  RequestlistFormat: '&7-> &e[0]'
+  JoinNotification: '&7현재 &a[0]&7명의 친구가 온라인 입니다.'
+  FriendJoined: '&7[0] 님이 &a온라인 &7입니다.'
+  FriendLeft: '&7[0] 님이 &c오프라인 &7입니다.'
+  RequestTrue: '&a앞으로 친구 요청을 받습니다.'
+  RequestFalse: '&f더이상 친구 요청을 받지 않습니다.'
+  NotificationTrue: '&a이제 알림을 받습니다.'
+  NotificationFalse: '&f더이상 알림을 받지 않습니다.'
+  NotOnline: '&c이 플레이어는 온라인이 아닙니다.'
+  MsgReceived: '&8[&a[0]&8] &e-> &8[&aMe&8] &8: &7[1]'
+  MsgSent: '&8[&aMe&8] &e-> &8[&a[0]&8] &8: &7[1]'
 
 HelpFormat:
-  Header: "&8-=-=-=- &eHelp &8-=-=-=-"
-  Help: "&e/friend help &8- &7Show this messages."
-  Add: "&e/friend add <Player> &8- &7Add a friend."
-  Remove: "&e/friend remove <Player> &8- &7Remove a friend."
-  Accept: "&e/friend accept <Player> &8- &7Accept a friend request."
-  Deny: "&e/friend deny <Player> &8- &7Deny a friend request."
-  List: "&e/friend list &8- &7Show a list of all your friends."
-  Msg: "&e/friend msg <Player> <Message> &8- &7Send a private message to a friend."
-  Requests: "&e/friend requests &8- &7Show a list of friend requests."
-  Togglenotify: "&e/friend togglenotify &8- &7Toggle receiving of online-/offline messages."
-  Togglerequests: "&e/friend togglerequests &8- &7Toggle getting requests."
-  Footer: "&8-=-=-=- &eHelp &8-=-=-=-"
+  Header: '&8-=-=-=- &7도움말 &8-=-=-=-'
+  Help: '&e/친구 도움말 &8- &7도움말을 표시합니다.'
+  Add: '&e/친구 요청 <플레이어> &8- &7해당 플레이어에게 친구 요청을 합니다.'
+  Remove: '&e/친구 삭제 <플레이어> &8- &7해당 플레이어와 관계를 끊습니다.'
+  Accept: '&e/친구 수락 <플레이어> &8- &7친구 요청을 수락합니다.'
+  Deny: '&e/친구 거절 <플레이어> &8- &7친구 요청을 거절합니다.'
+  List: '&e/친구 목록 &8- &7친구 목록을 보여줍니다.'
+  Msg: '&e/친구 귀 <플레이어> <말> &8- &7친구에게 개인 메시지를 보냅니다.'
+  Requests: '&e/친구 수신목록 &8- &7친구 요청 목록을 불러옵니다..'
+  Togglenotify: '&e/친구 알림 &8- &7친구의 온/오프라인 알림을 설정합니다.'
+  Togglerequests: '&e/친구 수신거부 &8- &7친구 요청 수신을 on/off 합니다.'
+  Footer: '&8-=-=-=- &7도움말 &8-=-=-=-'
 
 Commands:
-  Friend: "friend"
+  Friend: 친구
